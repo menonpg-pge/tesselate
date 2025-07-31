@@ -1,0 +1,15 @@
+{
+  "original_image": {
+    "path": "example1.png",
+    "width": 800,
+    "height": 600
+  },
+  "cut_parameters": {
+    "num_diagonal_bands": 5,
+    "type": "diagonal"
+  },
+  "slices": [
+    {
+      "index": 0,
+      "filename": "diagonal_0_0_0_280_280_band0.png",
+      "x": 

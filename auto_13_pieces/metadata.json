@@ -1,0 +1,175 @@
+{
+  "original_image": {
+    "path": "example1.png",
+    "width": 800,
+    "height": 600
+  },
+  "cut_parameters": {
+    "slice_width": 800,
+    "slice_height": 46,
+    "type": "auto_divide",
+    "requested_pieces": 13,
+    "actual_pieces": 13,
+    "optimal_grid": [
+      13,
+      1
+    ]
+  },
+  "slices": [
+    {
+      "index": 0,
+      "filename": "slice_0_0_0_800_46.png",
+      "x": 0,
+      "y": 0,
+      "width": 800,
+      "height": 46,
+      "x_end": 800,
+      "y_end": 46,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 1,
+      "filename": "slice_1_0_46_800_92.png",
+      "x": 0,
+      "y": 46,
+      "width": 800,
+      "height": 46,
+      "x_end": 800,
+      "y_end": 92,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 2,
+      "filename": "slice_2_0_92_800_138.png",
+      "x": 0,
+      "y": 92,
+      "width": 800,
+      "height": 46,
+      "x_end": 800,
+      "y_end": 138,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 3,
+      "filename": "slice_3_0_138_800_184.png",
+      "x": 0,
+      "y": 138,
+      "width": 800,
+      "height": 46,
+      "x_end": 800,
+      "y_end": 184,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 4,
+      "filename": "slice_4_0_184_800_230.png",
+      "x": 0,
+      "y": 184,
+      "width": 800,
+      "height": 46,
+      "x_end": 800,
+      "y_end": 230,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 5,
+      "filename": "slice_5_0_230_800_276.png",
+      "x": 0,
+      "y": 230,
+      "width": 800,
+      "height": 46,
+      "x_end": 800,
+      "y_end": 276,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 6,
+      "filename": "slice_6_0_276_800_322.png",
+      "x": 0,
+      "y": 276,
+      "width": 800,
+      "height": 46,
+      "x_end": 800,
+      "y_end": 322,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 7,
+      "filename": "slice_7_0_322_800_368.png",
+      "x": 0,
+      "y": 322,
+      "width": 800,
+      "height": 46,
+      "x_end": 800,
+      "y_end": 368,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 8,
+      "filename": "slice_8_0_368_800_414.png",
+      "x": 0,
+      "y": 368,
+      "width": 800,
+      "height": 46,
+      "x_end": 800,
+      "y_end": 414,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 9,
+      "filename": "slice_9_0_414_800_460.png",
+      "x": 0,
+      "y": 414,
+      "width": 800,
+      "height": 46,
+      "x_end": 800,
+      "y_end": 460,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 10,
+      "filename": "slice_10_0_460_800_506.png",
+      "x": 0,
+      "y": 460,
+      "width": 800,
+      "height": 46,
+      "x_end": 800,
+      "y_end": 506,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 11,
+      "filename": "slice_11_0_506_800_552.png",
+      "x": 0,
+      "y": 506,
+      "width": 800,
+      "height": 46,
+      "x_end": 800,
+      "y_end": 552,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 12,
+      "filename": "slice_12_0_552_800_598.png",
+      "x": 0,
+      "y": 552,
+      "width": 800,
+      "height": 46,
+      "x_end": 800,
+      "y_end": 598,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 13,
+      "filename": "slice_13_0_598_800_600.png",
+      "x": 0,
+      "y": 598,
+      "width": 800,
+      "height": 2,
+      "x_end": 800,
+      "y_end": 600,
+      "cut_type": "rectangular"
+    }
+  ],
+  "total_slices": 14
+}

@@ -1,0 +1,99 @@
+{
+  "original_image": {
+    "path": "example1.png",
+    "width": 800,
+    "height": 600
+  },
+  "cut_parameters": {
+    "direction": "horizontal",
+    "num_strips": 7,
+    "type": "strips"
+  },
+  "slices": [
+    {
+      "index": 0,
+      "filename": "strip_h_0_0_0_800_86.png",
+      "x": 0,
+      "y": 0,
+      "width": 800,
+      "height": 86,
+      "x_end": 800,
+      "y_end": 86,
+      "cut_type": "horizontal_strip",
+      "strip_number": 0
+    },
+    {
+      "index": 1,
+      "filename": "strip_h_1_0_86_800_172.png",
+      "x": 0,
+      "y": 86,
+      "width": 800,
+      "height": 86,
+      "x_end": 800,
+      "y_end": 172,
+      "cut_type": "horizontal_strip",
+      "strip_number": 1
+    },
+    {
+      "index": 2,
+      "filename": "strip_h_2_0_172_800_258.png",
+      "x": 0,
+      "y": 172,
+      "width": 800,
+      "height": 86,
+      "x_end": 800,
+      "y_end": 258,
+      "cut_type": "horizontal_strip",
+      "strip_number": 2
+    },
+    {
+      "index": 3,
+      "filename": "strip_h_3_0_258_800_344.png",
+      "x": 0,
+      "y": 258,
+      "width": 800,
+      "height": 86,
+      "x_end": 800,
+      "y_end": 344,
+      "cut_type": "horizontal_strip",
+      "strip_number": 3
+    },
+    {
+      "index": 4,
+      "filename": "strip_h_4_0_344_800_430.png",
+      "x": 0,
+      "y": 344,
+      "width": 800,
+      "height": 86,
+      "x_end": 800,
+      "y_end": 430,
+      "cut_type": "horizontal_strip",
+      "strip_number": 4
+    },
+    {
+      "index": 5,
+      "filename": "strip_h_5_0_430_800_515.png",
+      "x": 0,
+      "y": 430,
+      "width": 800,
+      "height": 85,
+      "x_end": 800,
+      "y_end": 515,
+      "cut_type": "horizontal_strip",
+      "strip_number": 5
+    },
+    {
+      "index": 6,
+      "filename": "strip_h_6_0_515_800_600.png",
+      "x": 0,
+      "y": 515,
+      "width": 800,
+      "height": 85,
+      "x_end": 800,
+      "y_end": 600,
+      "cut_type": "horizontal_strip",
+      "strip_number": 6
+    }
+  ],
+  "total_slices": 7
+}
