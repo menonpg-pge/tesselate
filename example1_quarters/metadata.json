@@ -1,0 +1,54 @@
+{
+  "original_image": {
+    "path": "example1.png",
+    "width": 800,
+    "height": 600
+  },
+  "slice_size": {
+    "width": 400,
+    "height": 300
+  },
+  "slices": [
+    {
+      "index": 0,
+      "filename": "slice_0_0_0_400_300.png",
+      "x": 0,
+      "y": 0,
+      "width": 400,
+      "height": 300,
+      "x_end": 400,
+      "y_end": 300
+    },
+    {
+      "index": 1,
+      "filename": "slice_1_400_0_800_300.png",
+      "x": 400,
+      "y": 0,
+      "width": 400,
+      "height": 300,
+      "x_end": 800,
+      "y_end": 300
+    },
+    {
+      "index": 2,
+      "filename": "slice_2_0_300_400_600.png",
+      "x": 0,
+      "y": 300,
+      "width": 400,
+      "height": 300,
+      "x_end": 400,
+      "y_end": 600
+    },
+    {
+      "index": 3,
+      "filename": "slice_3_400_300_800_600.png",
+      "x": 400,
+      "y": 300,
+      "width": 400,
+      "height": 300,
+      "x_end": 800,
+      "y_end": 600
+    }
+  ],
+  "total_slices": 4
+}

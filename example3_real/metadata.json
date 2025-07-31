@@ -1,0 +1,134 @@
+{
+  "original_image": {
+    "path": "../sahi/demo/demo_data/terrain2.png",
+    "width": 1024,
+    "height": 682
+  },
+  "slice_size": {
+    "width": 256,
+    "height": 256
+  },
+  "slices": [
+    {
+      "index": 0,
+      "filename": "slice_0_0_0_256_256.png",
+      "x": 0,
+      "y": 0,
+      "width": 256,
+      "height": 256,
+      "x_end": 256,
+      "y_end": 256
+    },
+    {
+      "index": 1,
+      "filename": "slice_1_256_0_512_256.png",
+      "x": 256,
+      "y": 0,
+      "width": 256,
+      "height": 256,
+      "x_end": 512,
+      "y_end": 256
+    },
+    {
+      "index": 2,
+      "filename": "slice_2_512_0_768_256.png",
+      "x": 512,
+      "y": 0,
+      "width": 256,
+      "height": 256,
+      "x_end": 768,
+      "y_end": 256
+    },
+    {
+      "index": 3,
+      "filename": "slice_3_768_0_1024_256.png",
+      "x": 768,
+      "y": 0,
+      "width": 256,
+      "height": 256,
+      "x_end": 1024,
+      "y_end": 256
+    },
+    {
+      "index": 4,
+      "filename": "slice_4_0_256_256_512.png",
+      "x": 0,
+      "y": 256,
+      "width": 256,
+      "height": 256,
+      "x_end": 256,
+      "y_end": 512
+    },
+    {
+      "index": 5,
+      "filename": "slice_5_256_256_512_512.png",
+      "x": 256,
+      "y": 256,
+      "width": 256,
+      "height": 256,
+      "x_end": 512,
+      "y_end": 512
+    },
+    {
+      "index": 6,
+      "filename": "slice_6_512_256_768_512.png",
+      "x": 512,
+      "y": 256,
+      "width": 256,
+      "height": 256,
+      "x_end": 768,
+      "y_end": 512
+    },
+    {
+      "index": 7,
+      "filename": "slice_7_768_256_1024_512.png",
+      "x": 768,
+      "y": 256,
+      "width": 256,
+      "height": 256,
+      "x_end": 1024,
+      "y_end": 512
+    },
+    {
+      "index": 8,
+      "filename": "slice_8_0_512_256_682.png",
+      "x": 0,
+      "y": 512,
+      "width": 256,
+      "height": 170,
+      "x_end": 256,
+      "y_end": 682
+    },
+    {
+      "index": 9,
+      "filename": "slice_9_256_512_512_682.png",
+      "x": 256,
+      "y": 512,
+      "width": 256,
+      "height": 170,
+      "x_end": 512,
+      "y_end": 682
+    },
+    {
+      "index": 10,
+      "filename": "slice_10_512_512_768_682.png",
+      "x": 512,
+      "y": 512,
+      "width": 256,
+      "height": 170,
+      "x_end": 768,
+      "y_end": 682
+    },
+    {
+      "index": 11,
+      "filename": "slice_11_768_512_1024_682.png",
+      "x": 768,
+      "y": 512,
+      "width": 256,
+      "height": 170,
+      "x_end": 1024,
+      "y_end": 682
+    }
+  ],
+  "total_slices": 12
+}
