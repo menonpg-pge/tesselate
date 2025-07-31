@@ -1,0 +1,81 @@
+{
+  "original_image": {
+    "path": "test_batch_input/project1/survey1/test_image.tif",
+    "width": 800,
+    "height": 600
+  },
+  "cut_parameters": {
+    "slice_width": 400,
+    "slice_height": 300,
+    "type": "auto_divide",
+    "requested_pieces": 4,
+    "actual_pieces": 4,
+    "optimal_grid": [
+      2,
+      2
+    ]
+  },
+  "slices": [
+    {
+      "index": 0,
+      "filename": "slice_0_0_0_400_300.png",
+      "x": 0,
+      "y": 0,
+      "width": 400,
+      "height": 300,
+      "x_end": 400,
+      "y_end": 300,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 1,
+      "filename": "slice_1_400_0_800_300.png",
+      "x": 400,
+      "y": 0,
+      "width": 400,
+      "height": 300,
+      "x_end": 800,
+      "y_end": 300,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 2,
+      "filename": "slice_2_0_300_400_600.png",
+      "x": 0,
+      "y": 300,
+      "width": 400,
+      "height": 300,
+      "x_end": 400,
+      "y_end": 600,
+      "cut_type": "rectangular"
+    },
+    {
+      "index": 3,
+      "filename": "slice_3_400_300_800_600.png",
+      "x": 400,
+      "y": 300,
+      "width": 400,
+      "height": 300,
+      "x_end": 800,
+      "y_end": 600,
+      "cut_type": "rectangular"
+    }
+  ],
+  "total_slices": 4,
+  "batch_info": {
+    "original_path": "test_batch_input/project1/survey1/test_image.tif",
+    "relative_path": "project1/survey1/test_image.tif",
+    "processed_at": 1753994511.6201842,
+    "processing_time": 0.02067399024963379,
+    "batch_config": {
+      "input_dir": "test_batch_input",
+      "output_dir": "test_batch_output",
+      "num_pieces": 4,
+      "max_workers": 2,
+      "min_image_size": 500,
+      "skip_existing": true,
+      "resume_mode": false,
+      "log_level": "INFO"
+    }
+  }
+}

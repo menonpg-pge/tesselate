@@ -1,0 +1,24 @@
+{
+  "batch_summary": {
+    "total_images_found": 2,
+    "successfully_processed": 2,
+    "skipped": 0,
+    "errors": 0,
+    "folders_skipped": 0,
+    "total_processing_time": 0.8098907470703125,
+    "average_time_per_image": 0.40494537353515625,
+    "images_per_hour": 8890.08798537973
+  },
+  "configuration": {
+    "input_dir": "test_batch_input",
+    "output_dir": "test_batch_output",
+    "num_pieces": 4,
+    "max_workers": 2,
+    "min_image_size": 500,
+    "skip_existing": true,
+    "resume_mode": false,
+    "log_level": "INFO"
+  },
+  "errors": [],
+  "timestamp": 1753994511.664344
+}

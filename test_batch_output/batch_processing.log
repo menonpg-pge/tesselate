@@ -1,0 +1,5 @@
+2025-07-31 16:41:50,854 - INFO - Starting batch tesselation job
+2025-07-31 16:41:50,854 - INFO - Scanning directory: test_batch_input
+2025-07-31 16:41:50,901 - INFO - Found 2 TIFF images to process
+2025-07-31 16:41:50,901 - INFO - Skipped 0 folders (JPG-only or no images)
+2025-07-31 16:41:50,901 - INFO - Processing 2 images with 2 workers

@@ -1,0 +1,26 @@
+{
+  "processed_files": [
+    "project1/survey1/test_image.tif",
+    "project1/survey1/real_test.tif"
+  ],
+  "stats": {
+    "total_found": 2,
+    "processed": 2,
+    "skipped": 0,
+    "errors": 0,
+    "folders_skipped": 0,
+    "start_time": 1753994510.854437,
+    "end_time": 0
+  },
+  "config": {
+    "input_dir": "test_batch_input",
+    "output_dir": "test_batch_output",
+    "num_pieces": 4,
+    "max_workers": 2,
+    "min_image_size": 500,
+    "skip_existing": true,
+    "resume_mode": false,
+    "log_level": "INFO"
+  },
+  "timestamp": 1753994511.663496
+}
