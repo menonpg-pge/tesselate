@@ -578,12 +578,116 @@ def slice_image_smart_equal(image_path: str, output_dir: str, target_slice_size:
     return slice_image_auto_divide(image_path, output_dir, estimated_pieces)
 
 
+def verify_images_identical(image1_path: str, image2_path: str) -> Dict:
+    """
+    Comprehensive verification that two images are 100% identical.
+    
+    Uses multiple verification methods:
+    - File size comparison
+    - MD5 hash comparison  
+    - Pixel-by-pixel comparison
+    - Dimension verification
+    """
+    import hashlib
+    
+    print(f"Verifying images are identical:")
+    print(f"  Image 1: {image1_path}")
+    print(f"  Image 2: {image2_path}")
+    print()
+    
+    results = {
+        "images": [image1_path, image2_path],
+        "file_sizes_match": False,
+        "md5_hashes_match": False,
+        "dimensions_match": False,
+        "pixels_identical": False,
+        "overall_identical": False
+    }
+    
+    try:
+        # 1. File size comparison
+        size1 = os.path.getsize(image1_path)
+        size2 = os.path.getsize(image2_path)
+        results["file_sizes_match"] = size1 == size2
+        print(f"File sizes: {size1} vs {size2} bytes - {'✓ MATCH' if results['file_sizes_match'] else '✗ DIFFER'}")
+        
+        # 2. MD5 hash comparison
+        def get_md5_hash(filepath):
+            hash_md5 = hashlib.md5()
+            with open(filepath, "rb") as f:
+                for chunk in iter(lambda: f.read(4096), b""):
+                    hash_md5.update(chunk)
+            return hash_md5.hexdigest()
+        
+        hash1 = get_md5_hash(image1_path)
+        hash2 = get_md5_hash(image2_path)
+        results["md5_hashes_match"] = hash1 == hash2
+        results["md5_hash1"] = hash1
+        results["md5_hash2"] = hash2
+        print(f"MD5 hashes: {'✓ MATCH' if results['md5_hashes_match'] else '✗ DIFFER'}")
+        print(f"  Hash 1: {hash1}")
+        print(f"  Hash 2: {hash2}")
+        
+        # 3. Image dimension comparison
+        img1 = Image.open(image1_path)
+        img2 = Image.open(image2_path)
+        results["dimensions_match"] = img1.size == img2.size
+        results["dimensions1"] = img1.size
+        results["dimensions2"] = img2.size
+        print(f"Dimensions: {img1.size} vs {img2.size} - {'✓ MATCH' if results['dimensions_match'] else '✗ DIFFER'}")
+        
+        # 4. Pixel-by-pixel comparison (if dimensions match)
+        if results["dimensions_match"]:
+            img1_array = np.array(img1.convert('RGB'))
+            img2_array = np.array(img2.convert('RGB'))
+            
+            # Compare all pixels
+            pixels_identical = np.array_equal(img1_array, img2_array)
+            results["pixels_identical"] = pixels_identical
+            
+            if pixels_identical:
+                print(f"Pixel comparison: ✓ ALL PIXELS IDENTICAL")
+            else:
+                # Count different pixels
+                diff_pixels = np.sum(img1_array != img2_array)
+                total_pixels = img1_array.size
+                diff_percentage = (diff_pixels / total_pixels) * 100
+                results["different_pixels"] = int(diff_pixels)
+                results["total_pixels"] = int(total_pixels)
+                results["difference_percentage"] = diff_percentage
+                print(f"Pixel comparison: ✗ {diff_pixels}/{total_pixels} pixels differ ({diff_percentage:.2f}%)")
+        else:
+            results["pixels_identical"] = False
+            print(f"Pixel comparison: ✗ SKIPPED (dimensions differ)")
+        
+        # Overall result
+        results["overall_identical"] = (
+            results["file_sizes_match"] and 
+            results["md5_hashes_match"] and 
+            results["dimensions_match"] and 
+            results["pixels_identical"]
+        )
+        
+        print()
+        if results["overall_identical"]:
+            print("🎉 VERIFICATION RESULT: Images are 100% IDENTICAL")
+        else:
+            print("❌ VERIFICATION RESULT: Images DIFFER")
+            
+        return results
+            
+    except Exception as e:
+        print(f"Error during verification: {e}")
+        results["error"] = str(e)
+        return results
+
+
 def main():
     """Enhanced command-line interface with multiple cut patterns."""
     parser = argparse.ArgumentParser(description="Enhanced Image Tesselation Tool")
     parser.add_argument("command", choices=[
         "slice", "reconstruct", "quarters", "strips", "diagonal", 
-        "random", "concentric", "grid", "auto-divide", "smart-equal", "demo"
+        "random", "concentric", "grid", "auto-divide", "smart-equal", "verify", "demo"
     ], help="Operation to perform")
     
     parser.add_argument("--image", "-i", help="Input image path")
@@ -611,13 +715,17 @@ def main():
     parser.add_argument("--num-pieces", type=int, help="Target number of pieces for auto-divide")
     parser.add_argument("--target-size", type=int, help="Target pixels per slice for smart-equal")
     
+    # Verify options
+    parser.add_argument("--image1", help="First image to compare")
+    parser.add_argument("--image2", help="Second image to compare")
+    
     args = parser.parse_args()
     
     if args.command == "demo":
         demo_all_patterns()
         return 0
     
-    if not args.image and args.command != "reconstruct":
+    if not args.image and args.command not in ["reconstruct", "verify"]:
         print("Error: --image required for most commands")
         return 1
     
@@ -668,6 +776,12 @@ def main():
             return 1
         output_dir = args.output or "smart_equal"
         slice_image_smart_equal(args.image, output_dir, args.target_size)
+        
+    elif args.command == "verify":
+        if not args.image1 or not args.image2:
+            print("Error: --image1 and --image2 required for verify command")
+            return 1
+        verify_images_identical(args.image1, args.image2)
         
     elif args.command == "reconstruct":
         if not args.metadata:
